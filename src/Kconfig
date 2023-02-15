@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+config SURFACE_SHUTDOWN
+	tristate "Shutdown driver for Microsoft Surface"
+	depends on EFI
+	depends on DMI
+	help
+	  This driver forces an EFI shutdown on Microsoft Surface
+	  devices that cannot properly power off using ACPI.
+
+	  If you have a Microsoft Surface device, say Y or M here.
+	  For a generic x86 distro config, say M here.
